@@ -17,7 +17,7 @@ RUN set -x \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
-# Install node 10 and npm
+# Install node 14 and npm
 RUN set -x \
     && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt-get update \
@@ -42,3 +42,22 @@ ENV QT_QPA_PLATFORM offscreen
 
 RUN mkdir /logs
 RUN touch /logs/selenium.log
+
+RUN echo "" \
+	&& echo "Dependencies version in this build:" \
+	&& echo "" \
+	&& echo "node.js" \
+	&& node -v \
+	&& echo "" \
+	&& echo "npm" \
+	&& npm -v \
+	&& echo "" \
+	&& echo "ChromeDriver" \
+	&& chromedriver --version | sed 's/[^0-9.]*\([0-9.]*\).*/\1/g' \
+	&& echo "" \
+	&& echo "Java" \
+	&& java -version 2>&1 | head -1 | sed 's/.*"\(.*\)"/\1/g' \
+	&& echo "" \
+	&& echo "PhantomJS" \
+	&& phantomjs -v \
+	&& echo ""
