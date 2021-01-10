@@ -17,9 +17,9 @@ RUN set -x \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
-# Install node 14 and npm
+# Install node 15 and npm
 RUN set -x \
-    && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
     && apt-get update \
     && apt-get install -y nodejs \
     && npm install -g npm@latest \

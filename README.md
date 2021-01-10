@@ -5,7 +5,7 @@ This docker image was created in order to run node.js tests that require Seleniu
 ## The latest image contains
 | Package name | Version |
 | ------ | ------ |
-| node.js | v14.15.4 |
+| node.js | v15.5.1 |
 | npm | 6.14.11 |
 | ChromeDriver | 87.0.4280.88 |
 | Java | 1.8.0_275 |
