@@ -59,5 +59,5 @@ RUN echo "" \
 	&& java -version 2>&1 | head -1 | sed 's/.*"\(.*\)"/\1/g' \
 	&& echo "" \
 	&& echo "PhantomJS" \
-	&& phantomjs -v \
+	&& phantomjs -v 2>&1 | tail -1 | sed 's/.*"\(.*\)"/\1/g' \
 	&& echo ""

@@ -5,10 +5,10 @@ This docker image was created in order to run node.js tests that require Seleniu
 ## The latest image contains
 | Package name | Version |
 | ------ | ------ |
-| node.js | v15.5.1 |
+| node.js | v15.8.0 |
 | npm | 7.3.0 |
-| ChromeDriver | 87.0.4280.88 |
-| Java | 1.8.0_275 |
+| ChromeDriver | 88.0.4324.96 |
+| Java | 1.8.0_282 |
 | PhantomJS | 2.1.1 |
 
 ## Usage example on Bitbucket Pipelines
