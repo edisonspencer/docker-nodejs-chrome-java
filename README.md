@@ -5,7 +5,7 @@ This docker image was created in order to run node.js tests that require Seleniu
 ## The latest image contains
 | Package name | Version |
 | ------ | ------ |
-| node.js | v15.8.0 |
+| node.js | v15.11.0 |
 | npm | 7.3.0 |
 | ChromeDriver | 88.0.4324.96 |
 | Java | 1.8.0_282 |
@@ -32,7 +32,7 @@ This repository is configured on Docker Hub to publish a new version of the imag
 After logging in to your Docker Hub account, do the following:
 
 ```
-docker build .
+make build
 docker tag <IMAGE_ID> edisonspencer/docker-nodejs-chrome-java:latest
 docker push edisonspencer/docker-nodejs-chrome-java
 ```
