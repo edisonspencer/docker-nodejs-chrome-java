@@ -22,26 +22,13 @@ RUN set -x \
     && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
     && apt-get update \
     && apt-get install -y nodejs \
-    && npm install -g npm@7.3.0 \
+    && npm install -g npm@7.11.0 \
     && apt-get clean
 
 # Make node available
 RUN set -x \
     && touch ~/.bashrc \
     && echo 'alias nodejs=node' > ~/.bashrc
-
-# Install PhantomJS
-RUN set -x \
-	&& apt-get update \
-    && apt-get install -y \
-        phantomjs \
-    && apt-get clean
-
-# Set PhantomJS to run headless
-ENV QT_QPA_PLATFORM offscreen
-
-RUN mkdir /logs
-RUN touch /logs/selenium.log
 
 RUN echo "" \
 	&& echo "Dependencies version in this build:" \
@@ -57,7 +44,4 @@ RUN echo "" \
 	&& echo "" \
 	&& echo "Java" \
 	&& java -version 2>&1 | head -1 | sed 's/.*"\(.*\)"/\1/g' \
-	&& echo "" \
-	&& echo "PhantomJS" \
-	&& phantomjs -v 2>&1 | tail -1 | sed 's/.*"\(.*\)"/\1/g' \
 	&& echo ""
