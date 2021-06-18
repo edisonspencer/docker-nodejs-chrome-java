@@ -7,8 +7,8 @@ This docker image was created in order to run node.js tests that require Seleniu
 | ------ | ------ |
 | node.js | v15.14.0 |
 | npm | 7.11.0 |
-| ChromeDriver | 90.0.4430.24 |
-| Java | 1.8.0_282 |
+| ChromeDriver | 91.0.4472.19 |
+| Java | 1.8.0_292 |
 
 ## Usage example on Bitbucket Pipelines
 
